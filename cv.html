@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <div id="header-container"></div>
+
+  <body>
+    <div class="wrapper">
+
+      <div id="bar-container"></div>
+
+      <section>
+        <h3><a href="https://tianhangpan.github.io/images/cv.pdf">CV</a></h3>
+        <h3><a href="https://tianhangpan.github.io/images/academic_transcript_bac.pdf">
+          Undergraduate academic transcript</a></h3>
+        <h3><a href="https://tianhangpan.github.io/images/academic_trasncript_mas.pdf">
+          Master's academic transcript</a></h3>
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+
+  <script>
+    fetch('head.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html;
+      });
+
+    fetch('bar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('bar-container').innerHTML = html;
+      });
+  </script>
+</html>
